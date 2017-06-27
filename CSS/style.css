@@ -18,18 +18,24 @@ h1, h2, h3, h4, h5, h6 {
 .header, .visual, .footer, .slogan, .main-content{
   width: 940px;
   margin: 0 auto;
-  .header {
+}
+.header {
   background-color: pink;
   height: 10vh;
   }
 .visual{
   background-color: lime;
   height: 10vh;
-  width: 940px;
-  margin: 0 auto;
+}
+.main-content{
+  background-color: blue;
+  height: 60vh;
+}
+.slogan{
+  background-color: yellow;
+  height: 10vh;
 }
 .footer{
   background-color: skyblue;
   height:10vh;
-}
 }
