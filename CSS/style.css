@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: silver;
   height: 100vh;
 }
-.header, .visual, .footer, .slogan, .main-content{
+.header, .visual, .main-content, .footer, .slogan {
   width: 940px;
   margin: 0 auto;
 }
@@ -28,8 +28,26 @@ h1, h2, h3, h4, h5, h6 {
   height: 10vh;
 }
 .main-content{
-  background-color: blue;
+  background-color: palevioletred;
   height: 60vh;
+  display: flex;
+  padding: 30px;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.group{
+  background-color: orangered;
+}
+.group1{
+  width: 250px;
+}
+.group2{
+  width: 380px;
+}
+.group3{
+  width: 190px;
+  *order = -1;
 }
 .slogan{
   background-color: yellow;
