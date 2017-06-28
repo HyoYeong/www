@@ -10,7 +10,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -45,7 +47,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+{
     font-size: 1em;
     font-weight: normal;
 }
@@ -79,10 +82,23 @@ body {
     box-sizing: border-box;
 }
 
+
+/* 헤더 */
+
 .header {
     background-color: #fff;
-    height: 115px;
     border-radius: 0 0 15px 15px;
+    min-height: 115px;
+    position: relative;
+}
+
+
+/* 로고 */
+
+.logo {
+    position: absolute;
+    top: 45px;
+    left: 60px;
 }
 
 .visual {
