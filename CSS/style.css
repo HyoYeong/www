@@ -112,8 +112,11 @@ a {
 .logo {
     position: absolute;
     top: 50px;
-    left: 60px;
+    left: 50px;
 }
+
+
+/*하위메뉴 배치*/
 
 
 /*텍스트링크 - 안내링크*/
@@ -127,14 +130,12 @@ a {
 }
 
 .info-menu li {
-    display: inline;
     font-size: 1.4rem;
     text-transform: uppercase;
 }
 
 .info-menu a {
     padding: 10px;
-    display: inline-block;
 }
 
 .info-menu li,
@@ -164,6 +165,7 @@ a {
 
 .main-menu>li {
     float: left;
+    position: relative;
 }
 
 .main-menu>li>a {
@@ -185,19 +187,31 @@ a {
 
 /*텍스트 아래에 검은색 줄 만드는 쿼리*/
 
-.main-menu>li>a:hover:after {
+.main-menu>li>a:hover::after {
     content: "";
     display: block;
     border-top: 2px solid #181818;
 }
 
 .main-menu ul {
-    list-style-type: none;
-    background: lime;
     position: absolute;
+    list-style-type: none;
+    white-space: nowrap;
+    top: 47px;
 }
 
-.about-html {}
+
+/*여기를 건들여야함 ㅠㅠ*/
+
+.main-menu ul li {
+    display: inline-block;
+}
+
+.about-html {
+    display: block;
+    top: 0;
+    left: 0;
+}
 
 .about-css {
     display: none;
