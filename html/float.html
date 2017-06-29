@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> float 속성 익히기</title>
+    <style>
+        .box {
+            background: yellow;
+            width: 500px;
+        }
+        
+        .box::after {
+            content: "";
+            background: lime;
+            display: block;
+            /*인라인하면 글자크기만큼 색칠해지고 블록으로하면 전체 영역이 라임색으로 변함*/
+            clear: both;
+        }
+        
+        .box img {
+            float: right;
+            position: relative;
+            right: -50px;
+        }
+        
+        .note {
+            background: pink;
+            /*clear: both;
+        margin-top: 100px;*/
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="box">
+
+        <img src="../images/news.gif" alt=""> ㅠㅠㅠ 넘나 빠른것ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+
+    </div>
+    <div class="note">
+        글자글자글ㅈ가릊글자글자글ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
+
+    </div>
+</body>
+
+</html>
