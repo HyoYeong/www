@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title> 3D Transform 속성 익히기 </title>
+    <style>
+        .container {
+            border: 1px solid #181818;
+            width: 1000px;
+            height: 500px;
+            margin: 50px auto;
+            /*perspective: 1000px;*/
+            overflow: hidden;
+        }
+        
+        .box {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: 20px;
+            transform: perspective(1000px) rotateY(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"> </div>
+        <div class="box"> </div>
+        <div class="box"> </div>
+        <div class="box"> </div>
+    </div>
+</body>
+
+</html>
