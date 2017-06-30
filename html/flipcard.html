@@ -47,22 +47,26 @@
 <body>
     <div class="container">
         <div id="card">
-            <div class="front"> 앞편 </div>
-            <div class="back"> 뒷편 </div>
+            <img class="front" src="http://mylko72.maru.net/jquerylab/study/q-hearts.jpg">
+            <img class="back" src="http://mylko72.maru.net/jquerylab/study/back.jpg">
         </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js">
-            integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin = "anonymous" >
-        </script>
-        <script>
-            $(function() {
-                $("#card").click(function() {
-                    $(this).toggleClass("flipped")
-                });
+    </div>
+    <botton class="btn"> click me </botton>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    <script>
+        // $function() {
+        //     $("#card").click(function() {
+        //         $(this).toggleClass("flipped");
+        //     });
+        // }
+        $(function() {
+            $('.btn').on('click', function() {
+                $('#card').toggleClass("flipped");
             });
-        </script>
+        });
+    </script>
 
 </body>
 
 </html>
-// commit 플립카드 예제
