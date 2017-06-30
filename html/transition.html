@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 트랜지션 익히기 </title>
+    <style>
+        .box1 {
+            width: 100px;
+            background: red;
+            height: 100px;
+            /*transition-property: border-radius, background;
+            transition-duration: 2s, 1s;
+            transition-delay: 0s, 1s;
+            transition-timing-function: ease-in-out;*/
+            transition: all 1s ease-in-out;
+            /*전이효과 따로 정의하지 않아도 변하는 중간과정을 자동으로 정의해서 보여줌 background 없어도 됨*/
+            /*background 1s 1s ease-in-out;*/
+        }
+        
+        .box1:hover,
+        .box1:focus {
+            border-radius: 50px;
+            background: blue;
+            outline: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1" tabindex="2"> </div>
+
+</body>
+
+
+
+
+</html>
