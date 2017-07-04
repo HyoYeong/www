@@ -44,7 +44,7 @@
 |---|---|---|---|---|
 |  헐 | 헐  |헐   |고양   | 고고양  |
 
-<img src = "http://www.cantabriatic.com/wp-content/uploads/2016/10/markdown-512.png" width="150px" align="right"> 
+<img src = "http://www.cantabriatic.com/wp-content/uploads/2016/10/markdown-512.png" width="100px" align="right"> 
 
 ~~이것은 마크다운 문법입니다.~~
 **취소라인입니다**
