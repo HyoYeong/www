@@ -387,10 +387,11 @@ a {
 }
 
 .login-form {
-    background: red;
-    border-radius: 5px;
+    /*background: red;*/
+    border-radius: 5px 5px 0 0;
     margin-top: 10px;
     padding: 10px;
+    background-color: white;
 }
 
 .login-heading {
@@ -402,10 +403,12 @@ a {
 
 .login-form fieldset {
     border: 0;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid black;
     padding: 0 0 10px 0;
     margin: 0;
     position: relative;
+    /*background-color: white;*/
+    /*border-radius: 4px;*/
 }
 
 user-pw {
@@ -420,7 +423,7 @@ user-pw {
 
 .login-form input {
     box-sizing: border-box;
-    width: 95px;
+    width: 120px;
     height: 22px;
     border: 1px 1px 1px 5px;
     padding: 1px 1px 1px 5px;
@@ -432,18 +435,18 @@ btn-login {
     border: 0;
     padding: 0 5px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0px;
+    right: 0px;
     cursor: pointer;
 }
 
 .member {
     padding: 0 10px 10px 10px;
-    background: #fff;
-    border-radius: 0 0 5px 5px;
+    background: whitesmoke;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    border-radius: 0 0 3px 3px;
 }
 
 .slogan {
