@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "fontello.css";
 @font-face {
     font-family: 'Noto Sans Regular';
     font-style: normal;
@@ -55,8 +56,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-{
+h6 {
     font-size: 1em;
     font-weight: normal;
 }
@@ -75,6 +75,18 @@ body {
     font-family: 'Noto Sans Regular', 'sans-serif';
     font-size: 1.4rem;
 }
+
+input,
+textarea,
+select,
+option,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+/*input tag text node 가 x*/
 
 
 /*레이아웃*/
@@ -177,14 +189,14 @@ a {
 }
 
 .main-menu span {
-    font-size: 1.6 rem;
+    font-size: 1.6rem;
     font-family: "Noto Sans Bold";
     color: rgba(255, 255, 255, 0.95);
     display: block;
     padding: 0 20px;
     line-height: 45px;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000:
+    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
 }
 
 .main-menu span:hover,
@@ -379,7 +391,120 @@ a {
     /*height: 150px;*/
 }
 
+.login-form {
+    background: white;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    margin-top: 10px;
+}
+
 .login {
+    padding: 10px;
+    border-radius: 5px;
+    background: radial-gradient(circle at right top, #e5893d, #e0652c);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.login-heading {
+    color: #ff0;
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
+    text-indent: 10px;
+}
+
+
+/*INDENT느ㄴ BLOCK에마ㄴ 사용가능, INLINE XX*/
+
+.login-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 15px;
+}
+
+.user-pw {
+    margin-top: 6px;
+}
+
+
+/*pos]ition 기버ㅂ으ㄴ 기준]위치가 중요하다*/
+
+.login-form label {
+    /*background: yellow;*/
+    width: 4em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/*cursor pointer느]ㄴ 소]ㄴ가락으로 보이게하]느]ㄴ거t*/
+
+
+/*inline block은 모바일화ㄴ경에서 특히 중요하다*/
+
+.login-form input {
+    box-sizing: border-box;
+    width: 100px;
+    height: 22px;
+    border: 1px solid black;
+    padding: 1px 1px 1px 5px;
+}
+
+.btn-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background: hsla(0, 100%, 70%, 1);
+    color: white;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+
+/*EM으ㄴ 4배라느ㄴ 뜻*/
+
+.member {
+    list-style-type: none;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    padding: 0 10px 10px 10px;
+    font-size: 1.3rem;
+}
+
+.member::after {
+    content: "";
+    display: block;
+    clear: both;
+    /*float 이슈를 해결하기위해 clear fix 작ㅅㅓㅇ 코드!!!!!*/
+}
+
+.icon-user::before,
+.icon-right-open::before {
+    color: palevioletred;
+}
+
+.join {
+    /*background: pink;*/
+    float: left;
+}
+
+.find {
+    /*background: red;*/
+    float: right;
+}
+
+
+/*위에 불릿을 j제거하느ㄴ거*/
+
+
+/*.login {
     background: radial-gradient(circle at right top, #e5892d, #e0652c);
     padding: 10px;
     border-radius: 10px;
@@ -388,7 +513,9 @@ a {
 
 .login-form {
     /*background: red;*/
-    border-radius: 5px 5px 0 0;
+
+
+/*border-radius: 5px 5px 0 0;
     margin-top: 10px;
     padding: 10px;
     background-color: white;
@@ -408,19 +535,22 @@ a {
     margin: 0;
     position: relative;
     /*background-color: white;*/
-    /*border-radius: 4px;*/
-}
 
-user-pw {
+
+/*border-radius: 4px;*/
+
+
+/*}*/
+
+
+/*user-pw {
     margin-top: 5px;
 }
-
 .login-form label {
     display: inline-block;
     width: 4em;
     cursor: pointer;
 }
-
 .login-form input {
     box-sizing: border-box;
     width: 120px;
@@ -428,7 +558,6 @@ user-pw {
     border: 1px 1px 1px 5px;
     padding: 1px 1px 1px 5px;
 }
-
 btn-login {
     width: 50px;
     height: 50px;
@@ -436,18 +565,17 @@ btn-login {
     padding: 0 5px;
     position: absolute;
     top: 0px;
-    right: 0px;
+        right: 0px;
     cursor: pointer;
 }
-
 .member {
     padding: 0 10px 10px 10px;
     background: whitesmoke;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    border-radius: 0 0 3px 3px;
-}
+    border-radius: 0 0 3px 3px; }
+    */
 
 .slogan {
     height: 10vh;
