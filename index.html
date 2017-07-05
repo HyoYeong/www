@@ -87,13 +87,13 @@
         <main class="main-content">
             <div class="group group1">
                 <div class="login">
-                    <div class="login-heading"> 로그인 </div>
+                    <div class="login-heading">로그인</div>
                     <!--텍스트 노드값 로그인-->
                     <form action='javascript:alert("회원님 반갑습니다.");' class='login-form'>
                         <fieldset>
                             <legend> 회원 로그인 폼 </legend>
                             <div class="user-email">
-                                <label for="user-email"> 아이디 </label>
+                                <label for="user-email">아이디</label>
                                 <!--너무 작아서 클릭이 힘든 경우에는 label 주면 된당 앞으에잇느레이블이랑영역이랑 결합할때에 무조j 아이디사용/-->
                                 <input type="email" id="user-email" required placeholder="이메일주소">
                                 <!--html의 새로은 기능으로 email 타입이 들어와야 인정해줌-->
@@ -130,18 +130,36 @@
                     <h2 class="term-heading">웹 관련 용어</h2>
                     <dl class="term-list">
                         <dt class="term-list-subject">웹 표준이란?</dt>
+                        <dd class="term-list-thumbnail"><img src="images/web_standards.gif" alt="W3C 로고"></dd>
                         <dd class="term-list-brief">W3C 단체에서 규정한 웹기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
-                        <dd class="term-list-thumbnail"><img src="images/webstandards.gif" alt="W3C 로고"></dd>
+                    </dl>
+                    <dl class="term-list even">
+                        <dt class="term-list-subject">웹 표준이란?</dt>
+                        <dd class="term-list-thumbnail"><img src="images/web_standards.gif" alt="W3C 로고"></dd>
+                        <dd class="term-list-brief">W3C 단체에서 규정한 웹기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
                     </dl>
                 </div>
 
             </div>
-            <div class="group group2"> </div>
-            <div class="group group3"> </div>
+            <div class="group group2">
+                <div class="search">
+                    <div class="search-heading"></div>
+                    <fieldset>
+                        <legend>검색어 입력창 폼</legend>
+                        <div class="keyword">
+                            <label for="keyword">자료검색</label>
+                            <input type="search" id="keyword" required placeholder="검색어를 입력하세요.">
+                        </div>
+                        <button type="submit" class="btn-search">검색</button>
+                    </fieldset>
+
+                </div>
+            </div>
+            <div class="group group3">콘텐츠컬럼3</div>
         </main>
-        <article class="slogan"> 슬로건 </article>
+        <article class="slogan">슬로건</article>
         <div class="footer-bg">
-            <footer class="footer"> 푸터 </footer>
+            <footer class="footer">푸터</footer>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
