@@ -469,7 +469,7 @@ a {
 }
 
 
-/*EM으ㄴ 4배라느ㄴ 뜻*/
+/*4em은 4배라는 의미이다.*/
 
 .member {
     list-style-type: none;
@@ -483,7 +483,7 @@ a {
     content: "";
     display: block;
     clear: both;
-    /*float 이슈를 해결하기위해 clear fix 작ㅅㅓㅇ 코드!!!!!*/
+    /*float 이슈를 해결하기위해 clear fix 작성코드!!!매우 중요!!*/
 }
 
 .icon-user::before,
@@ -502,7 +502,7 @@ a {
 }
 
 
-/*위에 불릿을 j제거하느ㄴ거 ㅗ(로그이)ㄴ헤딩) 폼 should ]separate block dan inline */
+/*위에 불릿을 제거하는 것이 로그인 헤딩폼은 inline과 block을 반드시 구분해야한다*/
 
 
 /*validator banner link*/
@@ -550,7 +550,29 @@ a {
     display: block;
 }*/
 
-term term-heading term-list term-list-subject term-
+
+/*웹관련용어 > 웹표준이란 > 썸네일 > 설명텍스트 의 순서대로 만들기*/
+
+.term {
+    background: linear-gradient(to bottom, #eee 0%, #ccc 100%);
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 3px;
+    background: yellow;
+}
+
+.term-heading {}
+
+.term-list {
+    background: url("images/web_standards.gif") no-repeat 20px 70%;
+}
+
+.term-list-subject {
+    background: url("images/web_standards.gif") no-repeat 20px 70%;
+    color: blue;
+}
+
+.term-
 /*.css-validation {
     margin-top: 20px;
     border-radius: 8px;
