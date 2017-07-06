@@ -649,6 +649,176 @@ a {
     color: #181818;
 }
 
+
+/*공지사항 및 자료실*/
+
+.board {
+    margin-top: 20px;
+    position: relative;
+    /*board 안에서 more가 움직여야하므로 board에 relative를 줘야함*/
+    height: 180px;
+}
+
+.notice-heading,
+.pds-heading {
+    float: left;
+    border: 1px solid #fff;
+    border-radius: 5px 5px 0 0;
+    color: gray;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.act .notice-heading,
+.act .pds-heading {
+    border-color: palevioletred;
+    border-bottom-color: #fff;
+    background: #fff;
+    color: #e0652c;
+    outline: 0;
+}
+
+.notice-more,
+.pds-more {
+    /*background: pink;*/
+    position: absolute;
+    top: 0;
+    right: -8px;
+    padding: 8px;
+}
+
+
+/*icon은 font의 일종임으로 color로 색상변경 가능*/
+
+.notice-more::before,
+.pds-more::before {
+    content: "p";
+    font-family: "webcafeicon";
+    color: hsla(120, 100%, 30%, 1);
+    position: relative;
+    top: 2px;
+}
+
+.notice-more,
+.pds-more,
+.notice-list,
+.pds-list {
+    display: none;
+}
+
+.notice-list li,
+.pds-list li {
+    margin: 5px 0;
+}
+
+.notice-list a,
+.pds-list a {
+    width: 285px;
+    float: left;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/*white-over-text 3개가 동시에 써져야함*/
+
+.notice-list time,
+.pds-list time {
+    float: right;
+}
+
+.act .notice-more,
+.act .pds-more,
+.act .notice-list,
+.act .pds-list {
+    display: block;
+}
+
+
+/*border box 중요한 기능!! 꼭 기억해두기*/
+
+.notice-list,
+.pds-list {
+    list-style-type: square;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    padding-left: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*새소식*/
+
+.news {
+    background: yellow;
+    margin-top: 20px;
+    position: relative;
+}
+
+.news-heading {
+    background: orange;
+    /*border-top: 1px solid gray;*/
+    font-family: "noto sans bold";
+    font-size: 1.4rem;
+    color: #e0652c;
+}
+
+.news-more {
+    background: pink;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+.news-item {
+    background: skyblue;
+    margin-top: 30px;
+    /*위에 쿼리가 새소식 아래에 띄워주는 역할을 한다.*/
+    position: relative;
+    padding-left: -130px;
+}
+
+.news-item a {
+    display: block;
+}
+
+.news-item-thumbnail {
+    background: green;
+    margin: 0;
+    box-shadow: 3px 16px gray;
+    position: absolute;
+    /*news-item을 기준으로 움직이는것이 합리적이다.*/
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+
+.news-item-date {
+    background: pink;
+    float: left;
+}
+
+.news-item-heading {
+    background: red;
+}
+
+.news-item-brief {
+    background: blue;
+    display: inline-block;
+}
+
+.news-item-thumbnail img {}
+
+.news-item-thumbnail figcaption {
+    text-align: center;
+}
+
 .slogan {
     height: 10vh;
 }
