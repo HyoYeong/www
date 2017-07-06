@@ -6,15 +6,16 @@
 
     <title> 웹카페 - 웹 접근성 및 웹포준, HTML5, CSS3 </title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link href="images/common/webcafe.ico" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
             <h1 class="logo">
-                <img src="images/logo.png" alt="웹카페"> </h1>
+                <img src="images/logo.png" alt="web cafe">
+            </h1>
             <ul class="info-menu">
                 <li><a href="#">홈</a></li>
                 <li><a href="#">로그인</a></li>
@@ -102,12 +103,10 @@
                             </div>
                             <div class="user-pw">
                                 <label for="user-pw"> 비밀번호 </label>
-                                <input type="password" id="user-pw" required placeholder="최소 8자리 이상">
+                                <input type="password" id="user-pw" required placeholder="최소 8자리">
                             </div>
                             <button type="submit" class="btn-login">로그인</button>
-
                         </fieldset>
-
                     </form>
                     <!--여기 class member에 다가 border radius 주기-->
                     <ul class="member">
@@ -119,10 +118,11 @@
                     <h2 class="validation-heading hidden">유효성 검사 배너 링크</h2>
                     <ul class="validation-list">
                         <li>
-                            <a href="https://validator.w3.org/" title="move to the site for markup validator site" targer="_blank"> W3C Markup Validation </a>
+                            <a href="https://validator.w3.org/" title="move to the site for markup validator site" target="_blank"> W3C Markup Validation 
+                            </a>
                         </li>
                         <li>
-                            <a href="https://jigsaw.w3.org/css-validator/" title="move to the site for css validator site" targer="_blank"> W3C CSS Validation Service </a>
+                            <a href="https://jigsaw.w3.org/css-validator/" title="move to the site for css validator site" target="_blank"> W3C CSS Validation Service </a>
                         </li>
                     </ul>
                 </div>
@@ -130,11 +130,23 @@
                     <h2 class="term-heading">웹 관련 용어</h2>
                     <dl class="term-list">
                         <dt class="term-list-subject">웹 표준이란?</dt>
-                        <dd class="term-list-thumbnail"><img src="images/web_standards.gif" alt="W3C 로고"></dd>
-                        <dd class="term-list-brief">W3C 단체에서 규정한 웹기술 사양에 대한 규칙을 말하며 표준 규격은...</dd>
+                        <dd class="term-list-thumbnail">
+                            <img src="images/web_standards.gif" alt="W3C 로고">
+                        </dd>
+                        <dd class="term-list-brief">
+                            W3C 단체에서 규정한 웹기술 사양에 대한 규칙을 말하며 표준 규격은...
+                        </dd>
+                    </dl>
+                    <dl class="term-list even">
+                        <dt class="term-list-subject">웹 표준이란?</dt>
+                        <dd class="term-list-thumbnail">
+                            <img src="images/web_standards.gif" alt="W3C 로고">
+                        </dd>
+                        <dd class="term-list-brief">
+                            W3C 단체에서 규정한 웹기술 사양에 대한 규칙을 말하며 표준 규격은...
+                        </dd>
                     </dl>
                 </div>
-
             </div>
             <div class="group group2">
                 <div class="search">
@@ -149,6 +161,60 @@
                         </fieldset>
                     </form>
                 </div>
+                <div class="board">
+                    <div class="notice">
+                        <h2 class="notice-heading" tabindex="0">공지사항</h2>
+                        <ul class="notice-list">
+                            <li>
+                                <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+                                <time datetime="2017-07-06T13:44:25">2017.07.06</time>
+                            </li>
+                            <li>
+                                <a href="#">W3C 사이트 리뉴얼 소식 및 공지사항</a>
+                                <time datetime="2017-07-06T13:44:25">2017.07.06</time>
+                            </li>
+                            <li>
+                                <a href="#">KWCAG2.0소식</a>
+                                <time datetime="2017-07-06T13:44:25">2017.07.06</time>
+                            </li>
+                            <li>
+                                <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                                <time datetime="2017-07-06T13:44:25">2017.07.06</time>
+                            </li>
+                            <li>
+                                <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어봅시다.</a>
+                                <time datetime="2017-07-06T13:44:25">2017.07.06</time>
+                            </li>
+                        </ul>
+                        <a href="#" class="notice-more" title="공지사항">더보기</a>
+                    </div>
+                    <div class="pds">
+                        <h2 class="pds-heading" tabindex="0">자료실</h2>
+                        <ul class="pds-list">
+                            <li>
+                                <a href="#">디자인 사이트 링크 모음</a>
+                                <time datetime="2017-07-07T17:50:35">2017.07.07</time>
+                            </li>
+                            <li>
+                                <a href="#">웹 접근성 관련 자료 모음</a>
+                                <time datetime="2017-07-07T17:50:35">2017.07.07</time>
+                            </li>
+                            <li>
+                                <a href="#">예제 샘플 응용해보가</a>
+                                <time datetime="2017-07-07T17:50:35">2017.07.07</time>
+                            </li>
+                            <li>
+                                <a href="#">웹 접근성 향상을 위한 국가표준 기술 가이드 라인</a>
+                                <time datetime="2017-07-07T17:50:35">2017.07.07</time>
+                            </li>
+                            <li>
+                                <a href="#">로얄티 프리 이미지 자료</a>
+                                <time datetime="2017-07-07T17:50:35">2017.07.07</time>
+                            </li>
+                        </ul>
+                        <a href="#" class="pds-more" title="자료실">더보기</a>
+                    </div>
+                </div>
             </div>
             <div class="group group3">콘텐츠컬럼3</div>
         </main>
@@ -157,9 +223,7 @@
             <footer class="footer">푸터</footer>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
-        ;
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/webcafe.js"></script>
 </body>
 
@@ -167,10 +231,12 @@
 
 <!--<div class="search-heading"></div>-->
 <!--<fieldset>
-                        <legend>검색어 입력창 폼</legend>
-                        <div class="keyword">
-                            <label for="keyword">자료검색</label>
-                            <input type="search" id="keyword" required placeholder="검색어를 입력하세요.">
-                        </div>
-                        <button type="submit" class="btn-search">검색</button>
-                    </fieldset>-->
+                                <legend>검색어 입력창 폼</legend>
+                                <div class="keyword">
+                                    <label for="keyword">자료검색</label>
+                                    <input type="search" id="keyword" required placeholder="검색어를 입력하세요.">
+                                </div>
+                                <button type="submit" class="btn-search">검색</button>
+                            </fieldset>-->
+<!--C컨트롤 쉬프트 디가 바로아래복제-->
+<!--target을 사용하는 경우는 외부페이지 링크로 연결될때만-->

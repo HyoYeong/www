@@ -1,493 +1,516 @@
-    @charset "UTF-8";
-    @import "fontello.css";
-    @font-face {
-        font-family: 'Noto Sans Regular';
-        font-style: normal;
-        /*기울임꼴이 아님*/
-        font-weight: 400;
-        src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('font/eot/NotoSansKR-Regular-Hestia.eot'), url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
-    }
-    
-    @font-face {
-        font-family: 'Noto Sans Bold';
-        font-style: normal;
-        font-weight: 700;
-        src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
-    }
-    
-    @font-face {
-        font-family: 'webcafeIcon';
-        font-weight: 400;
-        src: url('font/webcafeIcon.eot');
-        src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'), url('font/webcafeIcon.woff') format('woff'), url('font/webcafeIcon.ttf') format('truetype'), url('font/webcafeIcon.svg#webcaferegular') format('svg');
-    }
-    /*숨김 콘텐츠*/
-    
-    legend,
-    .hidden {
-        position: absolute;
-        left: -9999em;
-    }
-    /*요소의 여백 초기화*/
-    
-    html,
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul,
-    li {
-        margin: 0;
-        padding: 0;
-    }
-    /*제목크기 초기화*/
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: normal;
-        font-size: 1em;
-    }
-    /*ctrl + /는 주석달기*/
-    /*기본스타일*/
-    
-    html {
-        font-size: 10px;
-    }
-    
-    body {
-        font-family: 'Noto Sans Regular', 'sans-serif';
-        font-size: 1.4rem;
-        line-height: 1.15;
-    }
-    
-    input,
-    textarea,
-    select,
-    option,
-    button {
-        font-family: inherit;
-        font-size: inherit;
-    }
-    /*input tag text node 가 x*/
-    /*레이아웃*/
-    
-    .wrapper {
-        background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
-        /*background-attachment: fixed; 뒤에 이미지는 그대로 두고 이동*/
-        height: 100vh;
-    }
-    
-    .header,
-    .visual,
-    .main-content,
-    .footer,
-    .slogan {
-        width: 940px;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-    /*링크스타일*/
-    
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-    /* 헤더 */
-    
-    .header {
-        background-color: #fff;
-        border-radius: 0 0 15px 15px;
-        /*min-height: 115px;*/
-        position: relative;
-        padding: 0 30px 40px 30px;
-    }
-    /* 로고 */
-    
-    .logo {
-        position: absolute;
-        top: 43px;
-        left: 50px;
-    }
-    /*하위메뉴 배치*/
-    /*텍스트링크 - 안내링크*/
-    
-    .info-menu {
-        list-style-type: none;
-        font-size: 0;
-        text-align: right;
-        position: relative;
-        right: -10px;
-    }
-    
-    .info-menu li,
-    .info-menu a {
-        display: inline-block;
-    }
-    
-    .info-menu li {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-    }
-    
-    .info-menu a {
-        padding: 10px;
-    }
-    
-    .info-menu li::after {
-        content: ":";
-    }
-    
-    .info-menu li:last-child::after {
-        content: "";
-    }
-    /*메인메뉴*/
-    
-    .main-menu {
-        background: linear-gradient(to bottom, #e5893d 0%, #e0652c 35%, #e5893d 100%);
-        list-style-type: none;
-        border-top: 2px solid #181818;
-        border-radius: 0 0 5px 5px;
-        padding-left: 225px;
-        height: 45px;
-    }
-    
-    .main-menu>li {
-        float: left;
-        position: relative;
-    }
-    
-    .main-menu span {
-        font-size: 1.6rem;
-        font-family: "Noto Sans Bold";
-        color: rgba(255, 255, 255, 0.95);
-        display: block;
-        padding: 0 20px;
-        line-height: 45px;
-        border-left: 2px solid rgba(255, 255, 255, 0.9);
-        text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
-    }
-    
-    .main-menu span:hover,
-    .main-menu span:focus {
-        /*color: hsla(45, 80%, 80%, 1);*/
-        color: #ff0;
-        outline: 0;
-    }
-    
-    .main-menu span:hover::after,
-    .main-menu span:focus::after {
-        content: "";
-        display: block;
-        border-top: 2px solid #181818;
-    }
-    /*텍스트 아래에 검은색 줄 만드는 쿼리*/
-    
-    .main-menu ul {
-        position: absolute;
-        list-style-type: none;
-        white-space: nowrap;
-        /*background: pink;*/
-        top: 47px;
-    }
-    /*.main-menu>li>a {
+@charset "UTF-8";
+@import "fontello.css";
+
+/*웹폰트 선언*/
+
+@font-face {
+    font-family: 'Noto Sans Regular';
+    font-style: normal;
+    /*기울임꼴이 아님*/
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'), url('font/eot/NotoSansKR-Regular-Hestia.eot'), url('font/eot/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Regular-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Regular-Hestia.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('font/eot/NotoSansKR-Bold-Hestia.eot'), url('font/eot/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), url('font/woff/NotoSansKR-Bold-Hestia.woff') format('woff'), url('font/otf/NotoSansKR-Bold-Hestia.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'webcafeIcon';
+    font-weight: 400;
+    src: url('font/webcafeIcon.eot');
+    src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'), url('font/webcafeIcon.woff') format('woff'), url('font/webcafeIcon.ttf') format('truetype'), url('font/webcafeIcon.svg#webcaferegular') format('svg');
+}
+
+
+/*숨김 콘텐츠*/
+
+legend,
+.hidden {
+    position: absolute;
+    left: -9999em;
+}
+
+
+/*요소의 여백 초기화*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*제목크기 초기화*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+/*ctrl + /는 주석달기*/
+
+
+/*기본스타일*/
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Noto Sans Regular', 'sans-serif';
+    font-size: 1.4rem;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+/*input tag text node 가 x*/
+
+
+/*레이아웃*/
+
+.wrapper {
+    background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
+    /*background-attachment: fixed; 뒤에 이미지는 그대로 두고 이동*/
+    height: 100vh;
+}
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+    width: 940px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/*링크스타일*/
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* 헤더 */
+
+.header {
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    padding: 0 30px 40px 30px;
+}
+
+
+/* 로고 */
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+
+/*텍스트링크 - 안내링크*/
+
+.info-menu {
+    list-style-type: none;
+    font-size: 0;
+    text-align: right;
+    position: relative;
+    right: -10px;
+}
+
+.info-menu li,
+.info-menu a {
+    display: inline-block;
+}
+
+.info-menu li {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.info-menu a {
+    padding: 10px;
+}
+
+.info-menu li::after {
+    content: ":";
+}
+
+.info-menu li:last-child::after {
+    content: "";
+}
+
+
+/*메인메뉴*/
+
+.main-menu {
+    background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    list-style-type: none;
+    border-top: 2px solid #181818;
+    border-radius: 0 0 5px 5px;
+    padding-left: 225px;
+    height: 45px;
+}
+
+.main-menu>li {
+    float: left;
+    position: relative;
+}
+
+.main-menu span {
     font-size: 1.6rem;
     font-family: "Noto Sans Bold";
     color: rgba(255, 255, 255, 0.95);
-    padding: 0 20px;
     display: block;
+    padding: 0 20px;
     line-height: 45px;
     border-left: 2px solid rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000;
-}*/
-    /*여기를 건들여야함 ㅠㅠ*/
-    
-    .main-menu ul li {
-        display: inline-block;
-    }
-    
-    .main-menu ul a::before {
-        font-family: "webcafeicon";
-        content: "r";
-        position: relative;
-        top: 2px;
-    }
-    
-    .main-menu ul a:hover:before,
-    .main-menu ul a:focus::before {
-        content: "c";
-    }
-    
-    .main-menu ul a {
-        padding: 8px 15px 7px 0;
-        display: block;
-    }
-    
-    .about-html {
-        display: block;
-        /*top: 0;*/
-        left: 0;
-    }
-    
-    .about-css {
-        display: none;
-        left: 0;
-    }
-    
-    .web-standards {
-        display: none;
-        left: 0px;
-    }
-    
-    .web-accessibility {
-        display: none;
-        left: -140px;
-    }
-    
-    .qna {
-        display: none;
-        left: -170px;
-    }
-    
-    .archeive {
-        display: none;
-        right: -25px;
-    }
-    /*비주얼*/
-    
-    @keyframes text-ani {
-        0% {
-            font-size: 12px;
-            color: rgba(0, 0, 0, 0);
-            transform: translate(0, 0);
-        }
-        100% {
-            font-size: 24px;
-            color: rgba(0, 0, 0, 1);
-            transform: translate(400px, 70px);
-        }
-    }
-    
-    @keyframes flower-ani {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    
-    .visual-text {
-        /*영역을 차지하지 않고 잘 내려옴*/
-        /*animation-name: text-ani; 이 2개가 animation의 필수요소*/
-        /*animation-duration: 5s; 무조건 앞에 나오는게 duration임*/
-        display: inline-block;
-        animation-delay: 2s;
+    text-shadow: 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 0px -1px 0 #000;
+}
+
+.main-menu span:hover,
+.main-menu span:focus {
+    /*color: hsla(45, 80%, 80%, 1);*/
+    color: gainsboro;
+    outline: 0;
+}
+
+.main-menu span:hover::after,
+.main-menu span:focus::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #181818;
+}
+
+
+/*텍스트 아래에 검은색 줄 만드는 쿼리*/
+
+.main-menu ul {
+    list-style-type: none;
+    position: absolute;
+    white-space: nowrap;
+    top: 47px;
+}
+
+
+/*여기를 건들여야함 ㅠㅠ*/
+
+.main-menu ul li {
+    display: inline-block;
+}
+
+.main-menu ul a::before {
+    font-family: "webcafeicon";
+    content: "r";
+    position: relative;
+    top: 2px;
+}
+
+.main-menu ul a:hover:before,
+.main-menu ul a:focus::before {
+    content: "c";
+}
+
+.main-menu ul a {
+    padding: 8px 15px 7px 0;
+    display: block;
+}
+
+.about-html {
+    display: block;
+    left: 0;
+}
+
+.about-css {
+    display: none;
+    left: 0;
+}
+
+.web-standards {
+    display: none;
+    left: 0px;
+}
+
+.web-accessibility {
+    display: none;
+    left: -140px;
+}
+
+.qna {
+    display: none;
+    left: -170px;
+}
+
+.archeive {
+    display: none;
+    right: -25px;
+}
+
+
+/*비주얼*/
+
+@keyframes text-ani {
+    0% {
+        font-size: 12px;
         color: rgba(0, 0, 0, 0);
-        animation: text-ani 0.5s forwards ease-in-out;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        transform: translate(0, 0);
     }
-    
-    .visual {
-        height: 120px;
-        position: relative;
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 70px);
     }
-    
-    .visual::before,
-    .visual::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120px;
-        /*animation: flower-ani 5s infinite alternate */
+}
+
+@keyframes flower-ani {
+    0% {
+        opacity: 0;
     }
-    
-    .visual::before {
-        background: url(images/ani_flower_01.png) no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
-        animation-name: flower-ani;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: linear;
+    100% {
+        opacity: 1;
     }
-    
-    .visual::after {
-        background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
-        animation-name: flower-ani;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
-        animation-timing-function: ease-in-out;
-        /*alternate가 없는 상태에서 animation-delay: 5s하면 같이 사라지ㅣㅁ*/
-    }
-    
-    .main-content {
-        background-color: #fff;
-        border-radius: 15px 15px 0 0;
-        padding: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        min-height: 400px;
-        /*align-items: flex-start;*/
-    }
-    
-    .group1 {
-        width: 250px;
-        background: red;
-        /*height: 100px;*/
-        /*align-self: flex-end;*/
-    }
-    
-    .group2 {
-        width: 380px;
-        background: blue;
-        /*height: 200px;*/
-    }
-    
-    .group3 {
-        width: 190px;
-        background: green;
-        /*height: 150px;*/
-    }
-    
-    .login-form {
-        background: white;
-        border-radius: 5px 5px 0 0;
-        padding: 10px;
-        margin-top: 10px;
-    }
-    
-    .login {
-        padding: 10px;
-        border-radius: 5px;
-        background: radial-gradient(circle at right top, #e5893d, #e0652c);
-        box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
-    }
-    
-    .login-heading {
-        color: #ff0;
-        font-family: "Noto Sans Bold";
-        font-size: 1.6rem;
-        text-indent: 10px;
-    }
-    /*INDENT느ㄴ BLOCK에마ㄴ 사용가능, INLINE XX*/
-    
-    .login-form fieldset {
-        border: 0;
-        padding: 0;
-        margin: 0;
-        position: relative;
-        border-bottom: 1px solid #aaa;
-        padding-bottom: 15px;
-    }
-    
-    .user-pw {
-        margin-top: 6px;
-    }
-    /*pos]ition 기버ㅂ으ㄴ 기준]위치가 중요하다*/
-    
-    .login-form label {
-        /*background: yellow;*/
-        width: 4em;
-        display: inline-block;
-        cursor: pointer;
-    }
-    /*cursor pointer느]ㄴ 소]ㄴ가락으로 보이게하]느]ㄴ거t*/
-    /*inline block은 모바일화ㄴ경에서 특히 중요하다*/
-    
-    .login-form input {
-        box-sizing: border-box;
-        width: 100px;
-        height: 22px;
-        border: 1px solid black;
-        padding: 1px 1px 1px 5px;
-    }
-    
-    .btn-login {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50px;
-        height: 50px;
-        border: 0;
-        padding: 0;
-        cursor: pointer;
-        background: hsla(0, 100%, 70%, 1);
-        color: white;
-        border-radius: 3px;
-        font-size: 1.2rem;
-    }
-    /*4em은 4배라는 의미이다.*/
-    
-    .member {
-        list-style-type: none;
-        background: white;
-        border-radius: 0 0 5px 5px;
-        padding: 0 10px 10px 10px;
-        font-size: 1.3rem;
-    }
-    
-    .member::after {
-        content: "";
-        display: block;
-        clear: both;
-        /*float 이슈를 해결하기위해 clear fix 작성코드!!!매우 중요!!*/
-    }
-    
-    .icon-user::before,
-    .icon-right-open::before {
-        color: palevioletred;
-    }
-    
-    .join {
-        /*background: pink;*/
-        float: left;
-    }
-    
-    .find {
-        /*background: red;*/
-        float: right;
-    }
-    /*위에 불릿을 제거하는 것이 로그인 헤딩폼은 inline과 block을 반드시 구분해야한다*/
-    /*validator banner link*/
-    
-    .validation {
-        margin-top: 20px;
-        /*border-radius: 8px;
-        width: 200px;
-        height: 30px;
-        padding: 1px 1px 1px 5px;*/
-        /*display: inline-block;*/
-        /*background: yellow;*/
-        /*line-height: 30px;
-        text-indent: 45px;*/
-    }
-    
-    .validation-list {
-        list-style-type: none;
-    }
-    
-    .validation-list a {
-        border: 1px solid #aaa;
-        display: block;
-        border-radius: 15px;
-        margin: 10px 0;
-        height: 30px;
-        line-height: 30px;
-        padding-left: 45px;
-        background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee 0%, #ccc 100%);
-    }
-    /*.validation-list li {
+}
+
+.visual-text {
+    /*영역을 차지하지 않고 잘 내려옴*/
+    /*animation-name: text-ani; 이 2개가 animation의 필수요소*/
+    /*animation-duration: 5s; 무조건 앞에 나오는게 duration임*/
+    display: inline-block;
+    animation-delay: 2s;
+    color: rgba(0, 0, 0, 0);
+    animation: text-ani 0.5s forwards ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.visual {
+    height: 120px;
+    position: relative;
+}
+
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    /*animation: flower-ani 5s infinite alternate */
+}
+
+.visual::before {
+    background: url(images/ani_flower_01.png) no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+    animation-name: flower-ani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.visual::after {
+    background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
+    animation-name: flower-ani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    /*alternate가 없는 상태에서 animation-delay: 5s하면 같이 사라지ㅣㅁ*/
+}
+
+.main-content {
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+    min-height: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*align-items: flex-start;*/
+}
+
+.group1 {
+    width: 250px;
+    /*background: red;*/
+    /*height: 100px;*/
+    /*align-self: flex-end;*/
+}
+
+.group2 {
+    width: 380px;
+    /*background: blue;*/
+    /*height: 200px;*/
+}
+
+.group3 {
+    width: 190px;
+    /*background: green;*/
+    /*height: 150px;*/
+}
+
+.login {
+    padding: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.login-heading {
+    color: #fff;
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
+    text-indent: 10px;
+}
+
+
+/*INDENT느ㄴ BLOCK에마ㄴ 사용가능, INLINE XX*/
+
+.login-form {
+    background: white;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.login-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 15px;
+}
+
+.user-pw {
+    margin-top: 6px;
+}
+
+
+/*position 기법은 기준위치가 중요하다*/
+
+.login-form label {
+    width: 4em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+/*cursor pointer는 손가락으로 보이게 하는 것*/
+
+
+/*inline block은 모바일 환경에서 특히 중요하다*/
+
+.login-form input {
+    box-sizing: border-box;
+    width: 95px;
+    height: 22px;
+    border: 1px solid black;
+    padding: 1px 1px 1px 5px;
+}
+
+.btn-login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background: hsla(0, 100%, 70%, 1);
+    color: white;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+
+
+/*4em은 4배라는 의미이다.*/
+
+.member {
+    list-style-type: none;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    padding: 0 10px 10px 10px;
+    font-size: 1.3rem;
+}
+
+.member::after {
+    content: "";
+    display: block;
+    clear: both;
+    /*float 이슈를 해결하기위해 clear fix 작성코드!!!매우 중요!!*/
+}
+
+.icon-user::before,
+.icon-right-open::before {
+    color: palevioletred;
+}
+
+.join {
+    float: left;
+}
+
+.find {
+    float: right;
+}
+
+
+/*위에 불릿을 제거하는 것이 로그인 헤딩폼은 inline과 block을 반드시 구분해야한다*/
+
+
+/*유효성 검사 배너 링크*/
+
+.validation {
+    margin-top: 20px;
+}
+
+.validation-list {
+    list-style-type: none;
+}
+
+.validation-list a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    height: 30px;
+    margin: 10px 0;
+    line-height: 30px;
+    padding-left: 45px;
+    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee 0%, #fff 100%);
+}
+
+
+/*.validation-list li {
     background: url("images/validation_icon.png") no-repeat 25px 50%, linear-gradient(to bottom, #eee, #ccc);
     list-style-type: none;
     border: 1px solid #aaa;
@@ -501,142 +524,145 @@
     background: pink;
     display: block;
 }*/
-    /*웹관련용어 > 웹표준이란 > 썸네일 > 설명텍스트 의 순서대로 만들기*/
-    
-    .term {
-        background: linear-gradient(to bottom, #eee 0%, #ccc 100%);
-        border-radius: 5px;
-        border: 1px solid gray;
-        padding: 10px 15px;
-        margin-top: 20px;
-    }
-    
-    .term-list-thumbnail,
-    .term-list-breif {
-        margin: 0;
-    }
-    
-    .term-list-subject,
-    .term-list-breif {
-        width: 145px;
-        float: right;
-    }
-    
-    .term-heading {
-        font-size: 1.6rem;
-        font-family: "Noto Sans Bold";
-    }
-    
-    .term-list {
-        background: red;
-        margin: 10px 0 0 0;
-    }
-    
-    .term-list-subject {
-        color: blue;
-        background: lime;
-        float: right;
-        width: 145px;
-        margin-bottom: 5px;
-    }
-    
-    .term-list::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    
-    .term-list-thumbnail {
-        background: pink;
-        float: left;
-    }
-    
-    .term-list-brief {
-        background: paleturquoise;
-        margin-top: 5px !important;
-    }
-    /*.even .term-list-thumbnail,
-    .even .term-list-breif {
-        margin: 0;
-    }
-    
-    .even .term-list-subject,
-    .even .term-list-breif {
-        float: left;
-        width: 145px;
-    }
-    
-    .even .term-left-thumbnail {
-        float: right;
-    }*/
-    /*.css-validation {
+
+
+/*웹관련용어 > 웹표준이란 > 썸네일 > 설명텍스트 의 순서대로 만들기*/
+
+.term {
+    background: linear-gradient(to bottom, #eee 0%, #fff 100%);
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.term-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.5rem;
+}
+
+.term-list {
+    /*background: red;*/
+    margin: 10px 0 0 0;
+}
+
+.term-list::before,
+.term-list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.term-list-subject,
+.term-list-breif {
+    width: 145px;
+    float: right;
+}
+
+.term-list-thumbnail,
+.term-list-breif {
+    margin: 0;
+}
+
+.term-list-subject {
+    /*color: blue;*/
+    font-family: "Noto Sans Bold"
+}
+
+.term-list-thumbnail {
+    float: left;
+}
+
+.term-list-breif {
+    background: paleturquoise;
+    margin-top: 5px !important;
+}
+
+.even .term-list-subject,
+.even .term-list-breif {
+    float: left;
+}
+
+.even .term-list-thumbnail {
+    float: right;
+}
+
+
+/*.css-validation {
     margin-top: 20px;
     border-radius: 8px;
     width: 200px;
     height: 30px;
     padding: 1px 1px 1px 5px;
     /*display: inline-block;*/
-    /*background: red;*/
-    /*border: 1px solid black;*/
-    /*line-height: 1px;} */
-    /*검색폼*/
-    
-    .search {
-        border: 1px solid #aaa;
-        border-radius: 3px;
-        background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-        height: 30px;
-        border-radius: 15px 15px 0 0;
-        padding: 15px 25px 5px 25px;
-        margin: 10px;
-        border-bottom: 0;
-        /*line-height: 50%;*/
-    }
-    
-    .search-form label::before {
-        font-family: webcafeicon;
-        content: "z";
-        /*background: greenyellow;*/
-        position: relative;
-        top: 2px;
-    }
-    
-    .search-form fieldset {
-        border: 0;
-        margin: 0;
-        padding: 0
-    }
-    
-    .search-form input {
-        width: 180px;
-        height: 22px;
-        border: 1px solid #aaa;
-        border-radius: 3px;
-        padding: 1px 1px 1px 5px;
-        margin: 3px;
-    }
-    
-    .btn-search {
-        border: 1px solid #aaa;
-        padding: 0 10px;
-        height: 24px;
-        border-radius: 3px;
-        background: pink;
-        color: #181818;
-    }
-    
-    .slogan {
-        height: 10vh;
-    }
-    
-    .footer {
-        height: 10vh;
-    }
-    
-    .footer-bg {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
-    }
-    /*.login {
+
+
+/*background: red;*/
+
+
+/*border: 1px solid black;*/
+
+
+/*line-height: 1px;} */
+
+
+/*검색폼*/
+
+.search {
+    background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 3px;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 5px 20px;
+}
+
+.search-form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+.search-form label::before {
+    font-family: webcafeicon;
+    content: "z";
+    /*background: greenyellow;*/
+    position: relative;
+    top: 2px;
+}
+
+.search-form input {
+    width: 195px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 5px;
+    margin: 0 5px;
+}
+
+.btn-search {
+    border: 1px solid #aaa;
+    padding: 0 10px;
+    height: 24px;
+    border-radius: 3px;
+    background: pink;
+    color: #181818;
+}
+
+.slogan {
+    height: 10vh;
+}
+
+.footer-bg {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(250, 250, 250, 1) 100%);
+}
+
+.footer {
+    height: 10vh;
+}
+
+
+/*.login {
     background: radial-gradient(circle at right top, #e5892d, #e0652c);
     padding: 10px;
     border-radius: 10px;
@@ -645,7 +671,9 @@
 
 .login-form {
     /*background: red;*/
-    /*border-radius: 5px 5px 0 0;
+
+
+/*border-radius: 5px 5px 0 0;
     margin-top: 10px;
     padding: 10px;
     background-color: white;
@@ -665,9 +693,15 @@
     margin: 0;
     position: relative;
     /*background-color: white;*/
-    /*border-radius: 4px;*/
-    /*}*/
-    /*user-pw {
+
+
+/*border-radius: 4px;*/
+
+
+/*}*/
+
+
+/*user-pw {
     margin-top: 5px;
 }
 .login-form label {
