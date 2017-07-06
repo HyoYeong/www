@@ -143,16 +143,15 @@
             </div>
             <div class="group group2">
                 <div class="search">
-                    <div class="search-heading"></div>
+                    <h2 class="search-heading hidden">검색</h2>
+                    <form action="javascript:alert('검색이 완료되었습니다.');" class="search-form"> </form>
                     <fieldset>
-                        <legend>검색어 입력창 폼</legend>
-                        <div class="keyword">
-                            <label for="keyword">자료검색</label>
-                            <input type="search" id="keyword" required placeholder="검색어를 입력하세요.">
-                        </div>
+                        <legend>검색 폼</legend>
+                        <!--<div class="keyword">-->
+                        <label for="search">자료검색</label>
+                        <input type="search" id="search" class="keyword" required placeholder="검색어를 입력하세요.">
                         <button type="submit" class="btn-search">검색</button>
                     </fieldset>
-
                 </div>
             </div>
             <div class="group group3">콘텐츠컬럼3</div>
@@ -169,3 +168,13 @@
 </body>
 
 </html>
+
+<!--<div class="search-heading"></div>-->
+<!--<fieldset>
+                        <legend>검색어 입력창 폼</legend>
+                        <div class="keyword">
+                            <label for="keyword">자료검색</label>
+                            <input type="search" id="keyword" required placeholder="검색어를 입력하세요.">
+                        </div>
+                        <button type="submit" class="btn-search">검색</button>
+                    </fieldset>-->
