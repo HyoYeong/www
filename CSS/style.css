@@ -542,7 +542,6 @@ a {
 }
 
 .term-list {
-    /*background: red;*/
     margin: 10px 0 0 0;
 }
 
@@ -565,17 +564,18 @@ a {
 }
 
 .term-list-subject {
-    /*color: blue;*/
-    font-family: "Noto Sans Bold"
+    font-family: "Noto Sans Bold";
+    color: black;
 }
 
 .term-list-thumbnail {
     float: left;
+    position: relative;
+    top: 23px;
 }
 
-.term-list-breif {
-    background: paleturquoise;
-    margin-top: 5px !important;
+.term-list .term-list-breif {
+    margin-top: 5px;
 }
 
 .even .term-list-subject,
@@ -585,6 +585,8 @@ a {
 
 .even .term-list-thumbnail {
     float: right;
+    position: relative;
+    top: 23px;
 }
 
 
@@ -755,7 +757,6 @@ a {
 /*새소식*/
 
 .news {
-    background: yellow;
     margin-top: 20px;
     position: relative;
 }
@@ -771,10 +772,9 @@ a {
 }
 
 .news-heading {
-    background: orange;
     font-family: "noto sans bold";
     font-size: 1.6rem;
-    color: #e0652c;
+    color: rgb(255, 76, 76);
 }
 
 .news-item {
@@ -782,6 +782,10 @@ a {
     padding-left: 130px;
     margin-top: 30px;
     /*위에 쿼리가 새소식 아래에 띄워주는 역할을 한다.*/
+}
+
+.news-item a {
+    display: block;
 }
 
 .news-item-heading {
@@ -826,6 +830,102 @@ a {
     color: hsla(120, 100%, 30%, 1);
     position: relative;
     top: 2px;
+}
+
+
+/*신규이벤트 및 관련 사이트*/
+
+.event-related {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.event {
+    border-bottom: 1px solid white;
+    position: relative;
+}
+
+.related {
+    margin-top: 10px;
+}
+
+.event-heading,
+.related-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
+}
+
+.event-heading span,
+.related-heading span {
+    color: red;
+}
+
+#event-detail {
+    margin-top: 10px;
+}
+
+#event-detail p {
+    padding-bottom: 10px;
+}
+
+#event-detail img {
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+#event-detail em {
+    font-style: normal;
+}
+
+.btn-event {
+    height: 18px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.btn-event-prev,
+.btn-event-next {
+    width: 18px;
+    height: 19px;
+    border: 0;
+    padding: 19px 0 0 0;
+    overflow: hidden;
+    cursor: pointer;
+    background: url("images/back_forward.png") no-repeat;
+}
+
+.btn-event-next {
+    background-position: 100% 0%;
+}
+
+.btn-event-next:focus,
+.btn-event-prev:focus {
+    outline: 2px solid salmon;
+}
+
+.related-list {
+    list-style-type: none;
+    background: white;
+    border: 1px solid #181818;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 25px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.related-list:focus,
+.related-list:hover {
+    height: 125px;
+    padding: 5px 0;
+}
+
+.related-list a {
+    line-height: 25px;
+    display: block;
+    padding-left: 25px;
 }
 
 
