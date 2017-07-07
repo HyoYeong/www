@@ -1010,7 +1010,34 @@ a {
 /*news-item을 기준으로 움직이는것이 합리적이다.*/
 
 .slogan {
-    height: 10vh;
+    background: pink;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.slogan-heading {
+    position: absolute;
+    left: 35px;
+    bottom: -25px;
+    width: 110px;
+    height: 0;
+    padding-top: 83px;
+    overflow: hidden;
+    background: url("images/coffee.png") no-repeat;
+}
+
+.slogan-content {
+    margin: 0 80px 0 100px;
+}
+
+.slogan-content q::before {
+    font-size: 3rem;
+    position: relative;
+    top: 10px;
+}
+
+.slogan-content q::after {
+    content: "";
 }
 
 .footer-bg {
@@ -1019,6 +1046,47 @@ a {
 
 .footer {
     height: 10vh;
+}
+
+
+/*푸터 로고*/
+
+.footer-logo {
+    position: absolute;
+    top: 45px;
+    left: 35px;
+}
+
+.tech-logo {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+
+/*가이드 메뉴*/
+
+.guide-list {
+    list-style-type: none;
+    background: #a09784;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.guide-list a {
+    display: block;
+    padding: 5px 0;
+    color: white;
+}
+
+
+/*주소 및 저작권*/
+
+address {
+    font-style: normal;
+    margin: 10px 0;
 }
 
 
