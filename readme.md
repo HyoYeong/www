@@ -40,9 +40,9 @@
 
 
 '''
-| 늉  | 늉늉  |  뇽 |  녕 |  고양이 |
+| 강아지 | 토끼 | 참새  | 거북이  |  고양이 |
 |---|---|---|---|---|
-|  헐 | 헐  |헐   |고양   | 고고양  |
+| 멍멍 | 폴짝  | 짹짹   | 엉금   |   |
 
 <img src = "http://www.cantabriatic.com/wp-content/uploads/2016/10/markdown-512.png" width="100px" align="right"> 
 
