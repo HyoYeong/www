@@ -13,7 +13,7 @@
 [github 계정]
 (https://www.naver.com/hyoyeong)
 
-'''javascripts
+javascripts
 
 
 
@@ -39,7 +39,7 @@
 
 
 
-'''
+
 | 강아지 | 토끼 | 참새  | 거북이  |  고양이 |
 |---|---|---|---|---|
 | 멍멍 | 폴짝  | 짹짹   | 엉금   |   |
